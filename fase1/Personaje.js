@@ -4,14 +4,14 @@ export class Personaje{
     #edad;
     #vivo;
     #casa;
-    #arma;
 
-    constructor(nombre="", edad=0, vivo=true, casa="", arma=""){
+
+    constructor(nombre="", edad=0, vivo=true, casa=""){
         this.#nombre=nombre;
         this.#edad=edad;
         this.#vivo=vivo;
         this.#casa=casa;
-        this.#arma=arma;
+
     }
 
     get getNombre() {
@@ -42,13 +42,6 @@ export class Personaje{
         this.#casa = casa;
     }
 
-    get getArma() {
-        return this.#arma;
-    }
-    set setArma(arma) {
-        this.#arma = arma;
-    }
-
     //METODOS
     
     presentarse(){
@@ -58,13 +51,6 @@ export class Personaje{
     morir(){
         this.#vivo=false;
         console.log("El personaje ha muerto");
-    }
-
-    equiparArma(arma){
-        if(arma instanceof Arma){
-            this.#arma=arma;
-            console.log(this.#nombre + " ha equipado el arma "+this.#arma.getNombre);
-        }else console.log("ERROR AL INTRODUCIR EL ARMA, NO ES UNA INSTANCIA DE ARMA");
     }
 
 }

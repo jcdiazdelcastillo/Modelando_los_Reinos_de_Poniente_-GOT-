@@ -1,10 +1,11 @@
-import { Personaje } from "./Personaje.js";
-import { Casa } from "./Casa.js";
-import { Arma } from "./Arma.js";
-import { Reino} from "./Reino.js";
+import { Guerrero } from "./clases/personajesEspeciales/Guerrero.js";
+import { Consejero } from "./clases/personajesEspeciales/Consejero.js";
+import { Rey } from "./clases/personajesEspeciales/Rey.js";
+import { Arma } from "./clases/Arma.js";
+import { Casa } from "./clases/Casa.js";
+
 
 //CREAR ARMAS
-const aguja = new Arma("Aguja", 15, "Daga");
 const garra = new Arma("Garra", 25, "Espada");
 
 // CREAR CASAS
@@ -13,10 +14,23 @@ const casaStark = new Casa("Stark", "Se acerca el invierno");
 const casaLannister = new Casa("Lannister", "Oye mi rugido");
 
 //CREAR PERSONAKES
-const jaime = new  Personaje("Jaime Lannister", 40, true, casaLannister);
-const arya = new Personaje("Arya Stark", 18, true, casaStark);
-const jon = new Personaje("Jon Snow", 25, true, casaStark);
+const jon = new  Guerrero("Jon Snow", 40, true, casaStark);
+const tyron = new Consejero("Tyrion Lannister", 18, true, casaLannister, "ataques");
+const robert = new Rey("Robert Baratheon", 25, true, casaLannister, 7);
 
+jon.presentarse();
+jon.equiparArma(garra);
+jon.luchar();
+jon.entrenar();
+
+tyron.presentarse();
+tyron.luchar();
+tyron.aconsejar();
+
+robert.presentarse();
+robert.gobernar();
+robert.luchar();
+/*
 //CREAR REINOS
 const poniente = new Reino("Poniente", jaime);
 poniente.agregarCasas(casaStark);
@@ -54,4 +68,4 @@ jaime.presentarse();
 
 //info armas
 garra.descripcion();
-aguja.descripcion();
+aguja.descripcion();*/
