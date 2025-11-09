@@ -48,7 +48,7 @@ export class Personaje{
 
     morir(){
         this.#vivo=false;
-        console.log("El personaje ha muerto");
+        console.log(this.#nombre + " ha muerto");
     }
 
 

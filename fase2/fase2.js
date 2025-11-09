@@ -17,7 +17,7 @@ const casaLannister = new Casa("Lannister", "Oye mi rugido");
 const jon = new  Guerrero("Jon Snow", 40, true, casaStark);
 const tyron = new Consejero("Tyrion Lannister", 18, true, casaLannister, "ataques");
 const robert = new Rey("Robert Baratheon", 25, true, casaLannister, 7);
-
+                                                                                                    
 jon.presentarse();
 jon.equiparArma(garra);
 jon.luchar();
