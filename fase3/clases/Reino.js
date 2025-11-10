@@ -6,13 +6,16 @@ export class Reino{
     #casas;
     #rey;
 
-    constructor(nombre="", rey="", casas=[]){
+    constructor(nombre="", rey=null, casas=[]){
         this.#nombre=nombre;
         this.#casas=casas;
         if(rey instanceof Personaje){
             this.#rey=rey;
             console.log(rey.getNombre +  "ha sido proclamado rey de "+this.#nombre);
-        }else console.log("Fallo al introducir el rey, no es una instancia de Personaje");
+        }else{
+            this.#rey=null;
+            console.log("Fallo al introducir el rey, no es una instancia de Personaje");
+        } 
     }
 
     set setNombre (nombre){

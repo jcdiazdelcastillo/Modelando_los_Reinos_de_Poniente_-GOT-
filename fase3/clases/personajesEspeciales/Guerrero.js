@@ -4,9 +4,15 @@ import { Arma } from "../Arma.js";
     export class Guerrero extends Personaje{
         #arma;
         #vida;
-        constructor(nombre="", edad=0, vivo=true, casa="", arma="", vida=100){
+        constructor(nombre="", edad=0, vivo=true, casa=null, arma=null, vida=100){
             super(nombre, edad, vivo, casa);
-            this.#arma=arma;
+            if(arma instanceof Arma){
+                this.#arma=arma;
+            }else{
+                this.#arma=null;
+                console.log("Error, no es una instancia de arma");
+            }
+
             this.#vida=vida;
         }
         set setArma (arma){

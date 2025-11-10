@@ -2,7 +2,7 @@ import { Personaje } from "../Personaje.js";
 
 export class Consejero extends Personaje{
     #especialidad;
-    constructor(nombre="", edad=0, vivo=true, casa="", especialidad=""){
+    constructor(nombre="", edad=0, vivo=true, casa=null, especialidad=""){
         super(nombre, edad, vivo, casa)
         this.#especialidad=especialidad;
     }

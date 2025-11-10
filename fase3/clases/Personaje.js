@@ -1,15 +1,22 @@
 import { Arma } from "./Arma.js";
+import { Casa } from "./Casa.js";
 export class Personaje{
     #nombre;
     #edad;
     #vivo;
     #casa;
 
-    constructor(nombre="", edad=0, vivo=true, casa="", arma=""){
+    constructor(nombre="", edad=0, vivo=true, casa=null){
         this.#nombre=nombre;
         this.#edad=edad;
         this.#vivo=vivo;
-        this.#casa=casa;
+        if(casa instanceof Casa){
+            this.#casa=casa;
+        }else{
+            this.casa = null;
+            console.log("Error, no es una instancia de casa");
+        }
+
     }
 
     get getNombre() {

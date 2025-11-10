@@ -47,7 +47,7 @@ export class Batalla{
                         }
                     }
                 }else{
-                    muerto = procesarAtaque(guerreroB, guerreroA); //si el random de decidirBatalla ha salido que es mayor a 0.5, empieza atazando la casaB
+                    muerto = this.procesarAtaque(guerreroB, guerreroA); //si el random de decidirBatalla ha salido que es mayor a 0.5, empieza atazando la casaB
                     if(muerto){//Si el guerrero A muere, avanza al siguiente guerrero
                         countCA++;
                     }else{//Si guerrero A no muere, ataca a guerreroB
