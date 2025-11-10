@@ -44,7 +44,11 @@ export class Personaje{
         return this.#casa;
     }
     set setCasa(casa) {
-        this.#casa = casa;
+        if(casa instanceof Casa){
+            this.#casa=casa;
+        }else{
+            console.log("Error, no es una instancia de casa");
+        }
     }
 
     //METODOS

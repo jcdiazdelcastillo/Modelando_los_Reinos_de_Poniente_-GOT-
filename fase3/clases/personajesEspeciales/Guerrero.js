@@ -16,18 +16,17 @@ import { Arma } from "../Arma.js";
             this.#vida=vida;
         }
         set setArma (arma){
-            this.#arma=arma;
+            if(arma instanceof (Arma)){
+                this.#arma=arma;
+                console.log(this.getNombre + " ha equipado el arma "+this.#arma.getNombre);
+            }else{
+                console.log("ERROR AL INTRODUCIR EL ARMA, NO ES UNA INSTANCIA DE ARMA");
+            }
+
         }
 
         get getArma(){
             return this.#arma;
-        }
-
-        equiparArma(arma){
-            if(arma instanceof Arma){
-                this.#arma=arma;
-                console.log(this.getNombre + " ha equipado el arma "+this.#arma.getNombre);
-            }else console.log("ERROR AL INTRODUCIR EL ARMA, NO ES UNA INSTANCIA DE ARMA");
         }
 
         luchar(){
@@ -37,7 +36,7 @@ import { Arma } from "../Arma.js";
         entrenar(){
             console.log(this.getNombre + " entrena con su arma "+this.#arma.getNombre);
         }
-
+        
         //NUEVO V3
         atacar(objetivo){
             const danio = Math.floor(this.#arma.getDanio * (0.7 + Math.random() * 0.6));
