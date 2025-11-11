@@ -51,7 +51,7 @@ export class Batalla{
                     if(muerto){//Si el guerrero A muere, avanza al siguiente guerrero
                         countCA++;
                     }else{//Si guerrero A no muere, ataca a guerreroB
-                        muerto= procesarAtaque(guerreroA, guerreroB); 
+                        muerto= this.procesarAtaque(guerreroA, guerreroB); 
                         if (muerto){ //Si guerrero B muere, avanza al siguiente guerrero
                             countCB++;
                         }
