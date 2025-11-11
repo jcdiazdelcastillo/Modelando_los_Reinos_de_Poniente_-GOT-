@@ -13,7 +13,6 @@ export class Personaje{
         if(casa instanceof Casa){
             this.#casa=casa;
         }else{
-            this.casa = null;
             console.log("Error, no es una instancia de casa");
         }
 

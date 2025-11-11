@@ -13,7 +13,6 @@ export class Reino{
             this.#rey=rey;
             console.log(rey.getNombre +  "ha sido proclamado rey de "+this.#nombre);
         }else{
-            this.#rey=null;
             console.log("Fallo al introducir el rey, no es una instancia de Personaje");
         } 
     }

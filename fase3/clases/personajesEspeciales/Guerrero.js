@@ -9,7 +9,6 @@ import { Arma } from "../Arma.js";
             if(arma instanceof Arma){
                 this.#arma=arma;
             }else{
-                this.#arma=null;
                 console.log("Error, no es una instancia de arma");
             }
 
