@@ -27,7 +27,7 @@ export class Reino{
     }
 
     
-    set setCasas (casas){ //casas es un array de casas. //REVISAR
+    set setCasas (casas){
         this.#casas=casas;
     }
 

@@ -28,6 +28,14 @@ import { Arma } from "../Arma.js";
             return this.#arma;
         }
 
+        set setVida(vida){
+            this.#vida=vida;
+        }
+
+        get getVida(){
+            return this.#vida;
+        }
+
         luchar(){
             console.log(this.getNombre + " ataca con su " + this.#arma.getNombre + ","+" causando "+this.#arma.getDanio + " puntos");
         }
