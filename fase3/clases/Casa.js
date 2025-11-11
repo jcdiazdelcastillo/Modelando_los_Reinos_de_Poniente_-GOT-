@@ -26,6 +26,10 @@ export class Casa{
         return this.#lema;
     }
 
+    set setMiembros(miembros){ //miembros es un array. Se le asigna a this.miembros
+        this.#miembros=miembros;
+    }
+
     get getMiembros(){
         return this.#miembros;
     }

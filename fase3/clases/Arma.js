@@ -38,12 +38,4 @@ export class Arma{
     descripcion(){
         console.log(this.#nombre + "(."+ this.#tipo +")" + " - daño: "+this.#danio);
     }
-
-
-
-
-
-
-
-    
 }

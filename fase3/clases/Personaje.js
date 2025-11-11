@@ -61,7 +61,4 @@ export class Personaje{
         this.#vivo=false;
         console.log(this.#nombre + " ha muerto");
     }
-
-
-
 }

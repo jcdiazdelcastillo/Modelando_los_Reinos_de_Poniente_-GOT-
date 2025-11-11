@@ -22,8 +22,14 @@ export class Reino{
         this.#nombre=nombre;
     }
 
+
     get getNombre (){
         return this.#nombre;
+    }
+
+    
+    set setCasas (casas){ //casas es un array de casas. //REVISAR
+        this.#casas=casas;
     }
 
     get getCasas(){
@@ -59,7 +65,4 @@ export class Reino{
     infoReyActual(){
         console.log("El rey actual es " + this.#rey.getNombre + " de la casa "+this.#rey.getCasa.getNombre);
     }
-
-
-
 }
