@@ -34,10 +34,10 @@ export class Batalla{
            while(countCA < guerrerosCA.length && countCB<guerrerosCB.length){
                 let guerreroA = guerrerosCA[countCA];
                 let guerreroB = guerrerosCB[countCB];
-
+                let muerto=false;
                 console.log("Nuevo enfrentamiento: "+guerreroA.getNombre +" vs "+guerreroB.getNombre);
                 if(turnoCA){
-                    let muerto=this.procesarAtaque(guerreroA, guerreroB) //GUERRERO A ATACA A GUERRERO B
+                    muerto=this.procesarAtaque(guerreroA, guerreroB) //GUERRERO A ATACA A GUERRERO B
                     if(muerto){ //Si guerrero B muere, avanza al siguiente guerrero
                         countCB++;
                     }else{ //Si guerrero B no muere, ataca a guerreroA
